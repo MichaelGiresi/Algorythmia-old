@@ -1,6 +1,7 @@
 #cartId {
     position: absolute;
     z-index: 2;
+    font-family: "JetBrains Mono";
     /* width: 500px; */
     width: 100%;
     height: 100vh;
@@ -64,6 +65,7 @@
     /* border: 1px black solid; */
     color: #c3c3c3;
     margin-bottom: 20px;
+    font-family: "JetBrains Mono";
   }
   
   .cart-product-info h3{
@@ -124,6 +126,7 @@
     border: none;
     cursor: pointer;
     width: 100%;
+    font-family: "JetBrains Mono";
     height: 40px;
     font-size: 14px;
     text-align: left;
@@ -148,6 +151,7 @@
   
   .cart-value {
     margin-right: 33px;
+    font-family: "JetBrains Mono";
   }
   
   /* CART PROMO */
@@ -174,10 +178,13 @@
     height: 45px;
     border-radius: 6px;
     margin-bottom: 15px;
+    font-family: "JetBrains Mono";
   
   }
   
+
   .cart-continue {
+    font-family: "JetBrains Mono";
     height: 45px;
     width: 80.5%;
     background-color: #c3c3c3;
@@ -207,6 +214,7 @@
   }
   
   .cart-pay {
+    font-family: "JetBrains Mono";
     width: 80%;
     margin-bottom: 15px;
     border-radius: 8px;

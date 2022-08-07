@@ -22,14 +22,14 @@ const ShopAll = () => {
                             <div className="sa-images-innercontainer1-slide1">
                                 <div className='sa-imagecontainer-slide1'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product1} width='100%' height= '100%'/></div>
                                 <div className='sa-slide1-info'>
-                                    <div className='sa-slide1-title'>Dungeons SSweatshirt</div>
+                                    <div className='sa-slide1-title'>Broken Order</div>
                                     <div className='sa-slide1-price'>$30</div>
                                 </div>
                             </div>
                             <div className="sa-images-innercontainer1-slide2">
                                 <div className='sa-imagecontainer-slide2'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product2} width='100%' height= '100%'/></div>
                                 <div className="sa-slide2-info">
-                                    <div className="sa-slide2-title">Dungeons Sweatshirt</div>
+                                    <div className="sa-slide2-title">Spaced Out Sheep</div>
                                     <div className="sa-slide2-price">$30</div>
                                 </div>
                                 
@@ -39,7 +39,7 @@ const ShopAll = () => {
                             <div className="sa-images-innercontainer1-rightslides-slide1">
                             <div className='sa-imagecontainer-images-rightslides-slide1'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product6} width="100%"/></div>
                                 <div className="sa-slide1-rightslides-info">
-                                    <div className="sa-slide1-rightslides-title">Dungeons Sweatshirt</div>
+                                    <div className="sa-slide1-rightslides-title">Algorythmia Official</div>
                                     <div className="sa-slide1-rightslides-price">$30</div>
                                 </div>
                             </div>
@@ -50,21 +50,21 @@ const ShopAll = () => {
                             <div className="sa-images-innercontainer2-row1-slide1">
                             <div className='sa-imagecontainer2-row1-slide1-image'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product3} width='100%' height= '100%'/></div>
                                 <div className="sa-row1-slide1-info">
-                                    <div className="sa-row1-slide1-title">Dungeons Sweatshirt</div>
+                                    <div className="sa-row1-slide1-title">Follow The Leader</div>
                                     <div className="sa-row1-slide1-price">$30</div>
                                 </div>
                             </div>
                             <div className="sa-images-innercontainer2-row1-slide2">
                             <div className='sa-imagecontainer2-row1-slide2-image'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product4} width='100%' height= '100%'/></div>
                                 <div className="sa-row1-slide2-info">
-                                    <div className="sa-row1-slide2-title">Dungeons Sweatshirt</div>
+                                    <div className="sa-row1-slide2-title">Solo Man</div>
                                     <div className="sa-row1-slide2-price">$30</div>
                                 </div>
                             </div>
                             <div className="sa-images-innercontainer2-row1-slide3">
                             <div className='sa-imagecontainer2-row1-slide3-image'><img style={{borderTopLeftRadius: '12px', borderTopRightRadius: '12px'}} src={product3} width='100%' height= '100%'/></div>
                                 <div className="sa-row1-slide3-info">
-                                    <div className="sa-row1-slide3-title">Dungeons Sweatshirt</div>
+                                    <div className="sa-row1-slide3-title">Follow The Leader</div>
                                     <div className="sa-row1-slide3-price">$30</div>
                                 </div>
                             </div>

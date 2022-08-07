@@ -47,14 +47,14 @@ const Hero = () => {
         <div className='container1'>
           <img className='container1-image'src={feature1}/>
           <div className='container1-product-price-container'>
-            <div className='container1-product-title'>Dungeons Sweatshirt</div>
+            <div className='container1-product-title'>Sheep</div>
             <div className='container1-price'>$30</div>
           </div>
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>
           <div className='container2-product-price-container'>
-            <div className='container2-product-title'>Brainded Clock</div>
+            <div className='container2-product-title'>Broken Order</div>
             <div className='container2-price'>$300</div>
           </div>
         </div>

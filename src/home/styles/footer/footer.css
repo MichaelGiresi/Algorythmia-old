@@ -32,14 +32,15 @@
 }
 
 .footer-shop-all {
-  font-size: 80px;
+  font-size: 60px;
   font-family: "JetBrains Mono";
   position: absolute;
-  margin-top: 100px;
+  margin-top: 110px;
 }
 @media (min-width: 1024px) {
   .footer-shop-all {
     font-size: 120px;
+    margin-top: 90px;
   }
 }
 @media (min-width: 1600px) {
@@ -111,7 +112,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px white solid;
-  font-size: 20px;
+  font-size: 9px;
   font-family: "JetBrains Mono";
   font-weight: bold;
 }

@@ -106,18 +106,25 @@ code {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  
+  font-size: 22px;
 
+}
+.about-info-container h1 {
+  font-family: "VT323";
 }
 
 .about-info-container h4 {
   margin-top: 20px;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "JetBrains Mono";
   
 }
 
 .about-info-container h3 {
   margin-bottom: 0;
+  font-family: "VT323";
   
 }
 
