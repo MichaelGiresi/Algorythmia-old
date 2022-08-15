@@ -1,4 +1,4 @@
-import Footer from "./home/components/Footer";
+// import Footer from "./home/components/Footer";
 import Hero from "./home/components/Hero";
 import Nav from "./home/components/Nav";
 import Upcomming from "./home/components/Upcomming";
@@ -8,14 +8,11 @@ import HomeOutput from "./home/components/HomeOutput";
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import ShopAll from "./ShopAll/components/ShopAll";
 import Error from "./Error";
-import About from "./About";
 import Product from '../src/Product/components/Product'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import cart from './cart/style/cart.css'
 import sheepimg1 from './assets/FollowTheLeaderPoster.jpeg'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import can from './assets/can.png'
-import AlgoLogo from './assets/AlgorythmiaA.svg'
 
 
 
@@ -27,12 +24,8 @@ function App() {
   const [hamburger, setHamburger] = useState(false)
 
 
-
-
-
-    
-    
-    const aboutPage = () => {
+  // About Page 
+  const aboutPage = () => {
       const aboutPage = document.getElementById('about-page')
       
       if(about) {
@@ -40,8 +33,6 @@ function App() {
         aboutPage.classList.toggle('show') 
         console.log(about)
         document.body.style.position = ''
-        
-        // document.body.style.inset = '0px'
         
       } else {
         setAbout(true)
@@ -56,8 +47,8 @@ function App() {
       }
       
     }
+
     // The parent div for the cart has an ID of cartId, and has a classname of cart-container
-    
     // 1. Toggling another classlist to handle display none/flex
     // 2. Transition using opacity instead of right.
     const Cart = () => {
@@ -168,7 +159,7 @@ function App() {
         <button id="hamburger-button" className="hamburger-exit" onClick={() => {Hamburger()}}>X</button>
         <div className="hamburger-about" onClick={() => {aboutPage()}}>About Page</div>
         <div className="hamburger-shopall" onClick={() => {Cart()}}>Shop All</div>
-        <div className="hamburger-cart" onClick={() => {Cart()}}>Cart</div>
+        <div className="hamburger-cart" onClick={() => {Cart()}}>Cart ({cartCount})</div>
         </div>
         
         <div className='links-container'>
@@ -178,7 +169,7 @@ function App() {
           <div id="about"className='about' onClick={() => {aboutPage()}}>ABOUT</div>
 
 
-          <div className='cart' onClick={() => {Cart()}}>CART 0</div>
+          <div className='cart' onClick={() => {Cart()}}>CART ({cartCount})</div>
         </div>
       </div>
       <div className='divider'></div>
