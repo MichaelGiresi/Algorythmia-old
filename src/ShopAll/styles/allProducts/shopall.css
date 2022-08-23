@@ -255,10 +255,15 @@
 
 .sa-images-innercontainer2-row1-slide1 {
   background-color: white;
-  width: 221px;
+  width: 95%;
   margin: 0 auto 0 auto;
   border-radius: 12px;
   margin-bottom: 15px;
+}
+@media (min-width: 1024px) {
+  .sa-images-innercontainer2-row1-slide1 {
+    width: 221px;
+  }
 }
 
 .sa-images-innercontainer2-row1-slide2 {
@@ -271,12 +276,17 @@
 
 .sa-images-innercontainer2-row1-slide3 {
   background-color: white;
-  width: 225px;
+  width: 95%;
   margin: 0 auto 0 auto;
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .sa-images-innercontainer2-row1-slide3 {
+    width: 221px;
+  }
 }
 
 .sa-images-innercontainer2-row2 {

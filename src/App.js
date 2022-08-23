@@ -9,10 +9,11 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import ShopAll from "./ShopAll/components/ShopAll";
 import Error from "./Error";
 import Product from '../src/Product/components/Product'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import cart from './cart/style/cart.css'
 import sheepimg1 from './assets/FollowTheLeaderPoster.jpeg'
 import can from './assets/can.png'
+import index from './index.css'
 
 
 
@@ -22,6 +23,57 @@ function App() {
   const [cart, setCart] = useState(false)
   const [cartCount, setCartCount] = useState(1)
   const [hamburger, setHamburger] = useState(false)
+
+  useEffect(() => {
+    const cartRemoveCounter = document.getElementById('cart-increment-remove')
+    const cartProductInfo = document.getElementById('cart-product-info-id')
+    const cartSubtotal = document.getElementById('cart-subtotal-id')
+    const cartPromo = document.getElementById('cart-promo-continue-id')
+    const cartPayChoice = document.getElementById('cart-pay-choice-id')
+    const cart = document.getElementById('cartId')
+    if(cartCount === 1) {
+      cartRemoveCounter.style.marginTop ='5px'
+      cartRemoveCounter.style.padding ='0px'
+      cartRemoveCounter.style.marginRight = '3px'
+    } else {
+      cartRemoveCounter.style.marginTop ='-2px'
+      cartRemoveCounter.style.padding =''
+    }
+    if(cartCount === 0) {
+      cartProductInfo.style.display ='none'
+      cartSubtotal.style.display ='none'
+      cartPromo.style.display ='none'
+      cartPayChoice.style.display ='none'
+      const empty = document.createElement('h1')
+      empty.style.color = 'white'
+      empty.style.fontFamily = 'JetBrains Mono'
+      empty.style.textAlign = 'center'
+      empty.innerHTML = 'Your Cart is Empty!'
+      cart.appendChild(empty)
+    }
+  },[cartCount])
+
+  const cartRemove = () => {
+    const remove = document.getElementById('cart-product-remove')
+    const cartProductInfo = document.getElementById('cart-product-info-id')
+    const cartSubtotal = document.getElementById('cart-subtotal-id')
+    const cartPromo = document.getElementById('cart-promo-continue-id')
+    const cartPayChoice = document.getElementById('cart-pay-choice-id')
+    const cart = document.getElementById('cartId')
+
+    if(remove) {
+      cartProductInfo.style.display ='none'
+      cartSubtotal.style.display ='none'
+      cartPromo.style.display ='none'
+      cartPayChoice.style.display ='none'
+      const empty = document.createElement('h1')
+      empty.style.color = 'white'
+      empty.style.fontFamily = 'JetBrains Mono'
+      empty.style.textAlign = 'center'
+      empty.innerHTML = 'Your Cart is Empty!'
+      cart.appendChild(empty)
+    }
+  }
 
 
   // About Page 
@@ -54,15 +106,35 @@ function App() {
     const Cart = () => {
       const cartId = document.getElementById('cartId')
       const cartButton = document.getElementById('cart-button')
+      const hhh = document.getElementById('hhhy')
+      const body = document.getElementById('yyy'); 
+      // console.log(body)
       
       if(cart) {
         setCart(false) 
         cartId.classList.toggle('open')
+        hhh.classList.toggle('open')
         console.log(cart)
+        body.classList.remove('stop-scrolling')
       } else {
         setCart(true) 
         cartId.classList.toggle('open')
+        hhh.classList.toggle('open')
         console.log(cart)
+        body.classList.add('stop-scrolling')
+      }
+    }
+
+    const closeCart = () => {
+      const cartId = document.getElementById('cartId')
+      const hhh = document.getElementById('hhhy')
+      const body = document.getElementById('yyy');
+
+      if(hhh) {
+        cartId.classList.toggle('open')
+        hhh.classList.toggle('open')
+        body.classList.remove('stop-scrolling')
+        
       }
     }
 
@@ -80,6 +152,30 @@ function App() {
         console.log(hamburger)
       }
     }
+
+    const HamburgerCart = () => {
+      const hamburgerId = document.getElementById('hamburgerId')
+      const cartId = document.getElementById('cartId')
+
+      hamburgerId.classList.toggle('open')
+      cartId.classList.toggle('open') 
+    }
+
+    const HamburgerAbout = () => {
+      const hamburgerId = document.getElementById('hamburgerId')
+      const aboutPage = document.getElementById('about-page')
+
+      hamburgerId.classList.toggle('open')
+      aboutPage.classList.toggle('show') 
+    }
+
+    const HamburgerShopAll = () => {
+      const hamburgerId = document.getElementById('hamburgerId')
+      const cartId = document.getElementById('cartId')
+
+      hamburgerId.classList.toggle('open')
+      cartId.classList.toggle('open') 
+    }
     
     return (
       
@@ -96,12 +192,15 @@ function App() {
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
       </div>
     </div>
-   
+
+
+   <div className="yyy">
+    <div className="hhh" id="hhhy" onClick={() => {closeCart()}}></div>
     <div id="cartId" className="cart-container" > 
       <div className="cart-button-container">
         <button id="cart-button" className="cart-exit" onClick={() => {Cart()}}>X</button>
       </div>
-      <div className="cart-product-info-container">
+      <div id="cart-product-info-id" className="cart-product-info-container">
         <div>
 
         <img className="cart-product-image" src={sheepimg1}/>
@@ -116,7 +215,7 @@ function App() {
           <h3>Follow The Leader</h3>
           <h6>$12</h6>
           <h6>In Stock</h6>
-          <button className="cart-product-remove-button" id="cart-product-remove">REMOVE</button>
+          <button className="cart-product-remove-button" id="cart-product-remove" onClick={() => {cartRemove()}}>REMOVE</button>
         </div>
         <div className="cart-product-increment-laptop">
           <button id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>-</button>
@@ -125,17 +224,17 @@ function App() {
         </div>
         </div>
       </div>
-      <div className="cart-subtotal-container">
+      <div id="cart-subtotal-id" className="cart-subtotal-container">
         <div className="cart-subtotal">Subtotal</div>
         <div className="cart-value">{`$${cartCount * 12}`}</div>
       </div>
-      <div className="cart-promo-continue-container">
+      <div id="cart-promo-continue-id" className="cart-promo-continue-container">
         <div className="cart-promo-title">Add Promo Code</div>
         <input className="cart-promo-input" placeholder="Enter your code"></input>
         <button className="cart-continue">Continue to Checkout</button>
       </div>
-      <div className="cart-pay-choice-container">
-        <h1>Or pay by</h1>
+      <div id="cart-pay-choice-id" className="cart-pay-choice-container">
+        <h1>Payment Methods</h1>
         <button className="cart-pay" id="cart-pay-paypal">Pay Pal</button>
         <button className="cart-pay" id="cart-pay-apple">Apple Pay</button>
         <button className="cart-pay" id="cart-pay-amazon">Amazon Pay</button>
@@ -143,11 +242,12 @@ function App() {
 
 
       </div>
+      </div>
 
 
           <div className='nav'>
       <div className='logo-links-container'>
-        <Link to="/" className="logo">A</Link>
+        <Link id='top' to="/" className="logo">A</Link>
         {/* <div className='logo'>A</div> */}
 
         <div className="nav-hamburger" onClick={() => {Hamburger()}}>
@@ -157,9 +257,9 @@ function App() {
         </div>
         <div id="hamburgerId">
         <button id="hamburger-button" className="hamburger-exit" onClick={() => {Hamburger()}}>X</button>
-        <div className="hamburger-about" onClick={() => {aboutPage()}}>About Page</div>
-        <div className="hamburger-shopall" onClick={() => {Cart()}}>Shop All</div>
-        <div className="hamburger-cart" onClick={() => {Cart()}}>Cart ({cartCount})</div>
+        <div className="hamburger-about" onClick={() => {HamburgerAbout()}} >About Page</div>
+        <a href="products" className="hamburger-shopall">Shop All</a>
+        <div className="hamburger-cart" onClick={() => {HamburgerCart()}}>Cart ({cartCount})</div>
         </div>
         
         <div className='links-container'>
@@ -181,7 +281,7 @@ function App() {
         <Route path="*" element = {<Error/>}/>
       </Routes>
       <div className="footer-container">
-        <div>ALGORYTHMIA</div>
+        <a href="/">ALGORYTHMIA</a>
         <div className="footer-links-container">
           <div>TERMS OF SERVICE</div>
           <div>SHOP ALL</div>
@@ -189,11 +289,11 @@ function App() {
         </div>
       </div>      
       <div className="footer-container-mobile">
-        <div>ALGORYTHMIA</div>
+      <a className="footer-algo" href="#top">ALGORYTHMIA</a>
         <div className="footer-links-container-mobile">
           <div>TERMS OF SERVICE</div>
-          <div>SHOP ALL</div>
-          <div>ABOUT</div>
+          <Link style={{color:"#c3c3c3", textDecoration:'none'}} to='products'>SHOP ALL</Link>
+          <div onClick={() => {aboutPage()}} style={{cursor:"pointer"}}>ABOUT</div>
         </div>
       </div>
     </Router>
