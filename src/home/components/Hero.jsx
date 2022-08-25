@@ -68,10 +68,10 @@ const Hero = () => {
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
         </div>
       </div>
-      <div className='video'>
+      <div className='video' >
 
        {/* <iframe className='iframe' src="" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-       {secret1? <iframe width="100%" height="500px" src="https://www.youtube.com/embed/fZUCxE3hsME?autoplay=1" title="YouTube video player" frameBorder="0" allow="autoplay" autoplay={true} muted allowFullScreen></iframe> : <video src={video} width="100%" autoPlay muted loop ></video>}
+       {secret1? <iframe width="100%" height="500px" src="https://www.youtube.com/embed/fZUCxE3hsME?autoplay=1"  title="YouTube video player" frameBorder="0" allow="autoplay" autoplay={true} muted allowFullScreen></iframe> : <video style={{borderRadius: '12px'}} src={video} width="100%" autoPlay muted loop ></video>}
        {/* <video src={video} width="100%" autoPlay loop ></video> */}
 
       </div>

@@ -21,6 +21,14 @@ $a: calc(100% - 5%);
     margin: 15px auto 9px auto;
     width: 95%;
 
+    @media (min-width: 768px) {
+        margin-top: 50px;
+    }
+
+    @media (min-width:1024px) {
+        margin-bottom: 45px;
+    }
+
     @media (min-width: 1600px) {
         margin-left: 0px;
         width: 100%;
@@ -86,6 +94,10 @@ $a: calc(100% - 5%);
     @media (min-width: 768px) {
         flex-direction: row;
         margin-bottom: 50px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-bottom: 80px;
     }
     @media (min-width: 1600px) {
         width: 100%;
@@ -279,10 +291,16 @@ $a: calc(100% - 5%);
     @media (min-width: 768px) {
         text-align: left;
         margin-block-start: 10px;
-        font-size: 15px;
+        font-size: 11px;
     }
     @media (min-width: 900px) {
+        font-size: 14px;
+    }
+    @media (min-width: 1150px) {
         font-size: 16px;
+    }
+    @media (min-width: 1330px) {
+        font-size: 20px;
     }
 
     @media (min-width: 1440px) {
