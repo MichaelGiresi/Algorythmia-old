@@ -4,6 +4,7 @@ import upcomming1 from '../../assets/FollowTheLeaderPoster.jpeg'
 import upcomming2 from '../../assets/FollowTheLeaderPoster02.jpeg'
 import upcomming3 from '../../assets/FollowTheLeaderPoster03.jpeg'
 const Upcomming = () => {
+  
   return (
     <div className='upcomming'>
       <h1>UPCOMMING</h1>
