@@ -1,4 +1,3 @@
-// import Footer from "./home/components/Footer";
 import Hero from "./home/components/Hero";
 import Nav from "./home/components/Nav";
 import Upcomming from "./home/components/Upcomming";
