@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import hero from '../styles/hero/hero.css'
 import feature1 from '../../assets/Wethreeheads01.jpeg'
 import feature2 from '../../assets/Brokengrid01.jpeg'
