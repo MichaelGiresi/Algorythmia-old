@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import hero from '../styles/hero/hero.css'
 import feature1 from '../../assets/Wethreeheads01.jpeg'
 import feature2 from '../../assets/Brokengrid01.jpeg'
@@ -33,11 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='video' >
-
-       {/* <iframe className='iframe' src="" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-       <video style={{borderRadius: '12px'}} src={video} width="100%" autoPlay muted loop ></video>
-       {/* <video src={video} width="100%" autoPlay loop ></video> */}
-
+        <video style={{borderRadius: '12px'}} src={video} width="100%" autoPlay muted loop ></video>
       </div>
     </div>
   )
