@@ -1,16 +1,9 @@
-$a: calc(100% - 5%);
-
 .hero {
     max-width: 1600px;
-    // background-color: green;
     margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     width: 100%;
-
-
 }
 
 .title-container {
@@ -20,15 +13,12 @@ $a: calc(100% - 5%);
     max-width: 1600px;
     margin: 15px auto 9px auto;
     width: 95%;
-
     @media (min-width: 768px) {
         margin-top: 50px;
     }
-
     @media (min-width:1024px) {
         margin-bottom: 45px;
     }
-
     @media (min-width: 1600px) {
         margin-left: 0px;
         width: 100%;
@@ -39,15 +29,11 @@ $a: calc(100% - 5%);
 
 .title {
     color: #c3c3c3;
-    // font-size: 100px;
     width: 95%;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-
-    // height: 200px;
-    // background-image: url(../../../assets/AlgorythmiaLogotypeGif.gif);
     background-repeat: repeat;
     @media (min-width: 768px) {
         width: 68%;
@@ -60,7 +46,6 @@ $a: calc(100% - 5%);
 }
 
 .phrase {
-    // position: absolute;
     color: #84ff84;
     font-size: 22px;
     display: none;
@@ -68,19 +53,15 @@ $a: calc(100% - 5%);
     font-weight: 900;
     opacity: .7;
     font-family: 'VT323';
-
     @media (min-width: 768px) {
         display: flex
     }
-
     @media (min-width: 1200px) {
         font-size: 30px;
     }
-
     @media (min-width: 1600px) {
         font-size: 40px;
     }
-    
 }
 
 .featured-container {
@@ -90,12 +71,10 @@ $a: calc(100% - 5%);
     width: 95%;
     margin: 0 auto 0 auto;
     align-items: center;
-
     @media (min-width: 768px) {
         flex-direction: row;
         margin-bottom: 50px;
     }
-
     @media (min-width: 1024px) {
         margin-bottom: 80px;
     }
@@ -107,46 +86,27 @@ $a: calc(100% - 5%);
 
 .container1 {
     background-color: white;
-    // height: 515px;
-    // width: 515px;
-    // width: 288px;    
     width: 100%;
     height: 120%;
-    // height: $a;
     border-radius: 12px;
     color: black;
     margin-bottom: 15px;
-
     @media (min-width: 768px) {
         width: 33%;
         margin-bottom: 0px;
     }
-    
 }
-// .container1:after {
-//     padding-bottom: 100%;
-//     // display: block;
-// }
-
 
 .container1-image {
     display: flex;
-    // background-image: url(../../../assets/Wethreeheads01.jpeg);
-    // object-fit: cover;
-    // height: 515px;
-    // width: 515px;
     width: 100%;
-    // background-repeat: stretch;
     justify-content: center;
     align-items: center;
-    // background-color: blue;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    // height: 90%;
 }
 
 .container1-product-price-container {
-    // background-color: orange;
     height: 4vh;
     border-radius: 12px;
     display: flex;
@@ -183,15 +143,11 @@ $a: calc(100% - 5%);
     @media (min-width:1440px) {
         font-size: 22px;
     }
-
 }
 
 
 .container2 {
     background-color: white;
-    // height: 515px;
-    // width: 515px;
-    // height: 288px;
     width: 100%;
     border-radius: 12px;
     color: black;
@@ -207,17 +163,14 @@ $a: calc(100% - 5%);
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: blue;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     height: 90%;
     object-fit: cover;
     width: 100%;
-
 }
 
 .container2-product-price-container {
-    // background-color: orange;
     height: 4vh;
     border-radius: 12px;
     display: flex;
@@ -229,7 +182,6 @@ $a: calc(100% - 5%);
     @media (min-width:425px) {
         height: 5vh;
     }
-
 }
 
 .container2-product-title {
@@ -243,7 +195,6 @@ $a: calc(100% - 5%);
     @media (min-width:1440px) {
         font-size: 22px;
     }
-
 }
 
 .container2-price {
@@ -258,25 +209,18 @@ $a: calc(100% - 5%);
     @media (min-width:1440px) {
         font-size: 22px;
     }
-
 }
 
 .info {
-    // background-color: white;
-    // height: 515px;
-    // width: 515px;
     width: 95%;
     border-radius: 12px;
     color: white;
     display: flex;
-
     justify-content: center;
     flex-direction: column;
     text-align: left;
     @media (min-width: 768px) {
-        width: 30%;
-        // height: 100%;
-        
+        width: 30%;       
     }
 }
 
@@ -302,14 +246,12 @@ $a: calc(100% - 5%);
     @media (min-width: 1330px) {
         font-size: 20px;
     }
-
     @media (min-width: 1440px) {
         font-size: 23px;
     }
 }
 
 .info h6 {
-    // display: none;
     text-align: center;
     margin-bottom: 15px;
     padding: 0;
@@ -323,7 +265,6 @@ $a: calc(100% - 5%);
         font-size: 38px;
         font-weight: 400;
     }
-
     @media (min-width: 830px) {
         margin-block-start: 0;
     }
@@ -337,30 +278,7 @@ $a: calc(100% - 5%);
     @media(min-width:768px) {
         display: flex;
     }
-
     @media (min-width: 1600px) {
         width: 100%;
-    }
-}
-
-.iframe {
-    width: 100%;
-    height: 350px;
-    border-radius: 12px;
-
-    @media (min-width: 768px) {
-        height: 500px;
-    }
-    @media (min-width: 1000px) {
-        height: 600px;
-    }
-    @media (min-width:1200px) {
-        height: 700px;
-    }
-    @media (min-width: 1440px) {
-        height: 800px;
-    }
-    @media (min-width: 1600px) {
-        height: 900px;
     }
 }
