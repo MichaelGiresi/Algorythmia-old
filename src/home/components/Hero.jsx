@@ -6,42 +6,6 @@ import logo from '../../assets/AlgorythmiaLogotypeGif.gif'
 import video from '../../assets/PosterMockup.mp4'
 const Hero = () => {
 
-  const [secret1, setSecret1] = useState(false)
-  // const a = []
-
-  // useEffect(() => {
-  //   window.addEventListener('keydown', (e) => {
-  //     const store = e.key
-  //     if(store === 'm') {
-  //       a.push(store)
-  //     }
-  //     console.log(a)
-      // if(store === 'm') {
-      //   a.push(store)
-      // } else if (store === 'b'){
-      //   a.push(store)
-      // } else if (store === 'r') {
-      //   a.push(store)
-      // } else {
-
-      // }
-      // a.length = 0
-      // // console.log(a)
-
-  //     if(a.length === 3) {
-  //       setSecret1(true)
-  //       console.log(secret1)
-  //     } else {
-  //       setSecret1(false)
-  //     }
-
-
-  //   })
-  // })
-  
-
-
-
   return (
     <div className='hero'>
       <div className='title-container'>
@@ -71,7 +35,7 @@ const Hero = () => {
       <div className='video' >
 
        {/* <iframe className='iframe' src="" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-       {secret1? <iframe width="100%" height="500px" src="https://www.youtube.com/embed/fZUCxE3hsME?autoplay=1"  title="YouTube video player" frameBorder="0" allow="autoplay" autoplay={true} muted allowFullScreen></iframe> : <video style={{borderRadius: '12px'}} src={video} width="100%" autoPlay muted loop ></video>}
+       <video style={{borderRadius: '12px'}} src={video} width="100%" autoPlay muted loop ></video>
        {/* <video src={video} width="100%" autoPlay loop ></video> */}
 
       </div>
