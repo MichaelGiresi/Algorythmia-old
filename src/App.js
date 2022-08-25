@@ -1,6 +1,5 @@
 import Hero from "./home/components/Hero";
 import Upcomming from "./home/components/Upcomming";
-import Video from "./home/components/Video";
 import nav from '../src/home/styles/nav/nav.css'
 import HomeOutput from "./home/components/HomeOutput";
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
