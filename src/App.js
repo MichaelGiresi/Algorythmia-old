@@ -28,6 +28,7 @@ function App() {
     const cartPromo = document.getElementById('cart-promo-continue-id')
     const cartPayChoice = document.getElementById('cart-pay-choice-id')
     const cart = document.getElementById('cartId')
+    const test = document.getElementsByTagName('body')
     if(cartCount === 1) {
       cartRemoveCounter.style.marginTop ='5px'
       cartRemoveCounter.style.padding ='0px'
@@ -104,7 +105,7 @@ function App() {
       const cartId = document.getElementById('cartId')
       const cartButton = document.getElementById('cart-button')
       const hhh = document.getElementById('hhhy')
-      const body = document.getElementById('yyy'); 
+      const html = document.getElementById('algo__html'); 
       // console.log(body)
       
       if(cart) {
@@ -112,25 +113,26 @@ function App() {
         cartId.classList.toggle('open')
         hhh.classList.toggle('open')
         console.log(cart)
-        body.classList.remove('stop-scrolling')
+        html.classList.remove('stop-scrolling')
       } else {
         setCart(true) 
         cartId.classList.toggle('open')
         hhh.classList.toggle('open')
         console.log(cart)
-        body.classList.add('stop-scrolling')
+        html.classList.add('stop-scrolling')
       }
     }
 
     const closeCart = () => {
       const cartId = document.getElementById('cartId')
       const hhh = document.getElementById('hhhy')
-      const body = document.getElementById('yyy');
+      const html = document.getElementById('algo__html');
 
       if(hhh) {
+        setCart(false)
         cartId.classList.toggle('open')
         hhh.classList.toggle('open')
-        body.classList.remove('stop-scrolling')
+        html.classList.remove('stop-scrolling')
         
       }
     }
@@ -138,14 +140,17 @@ function App() {
     const Hamburger = () => {
       const hamburgerId = document.getElementById('hamburgerId')
       const hamburgerButton = document.getElementById('hamburger-button')
+      const html = document.getElementById('algo__html');
       
       if(hamburger) {
         setHamburger(false) 
         hamburgerId.classList.toggle('open')
+        html.classList.remove('stop-scrolling')
         console.log(hamburger)
       } else {
         setHamburger(true) 
         hamburgerId.classList.toggle('open')
+        html.classList.add('stop-scrolling')
         console.log(hamburger)
       }
     }
@@ -153,9 +158,14 @@ function App() {
     const HamburgerCart = () => {
       const hamburgerId = document.getElementById('hamburgerId')
       const cartId = document.getElementById('cartId')
+      const html = document.getElementById('algo__html');
 
-      hamburgerId.classList.toggle('open')
-      cartId.classList.toggle('open') 
+      if(HamburgerCart) {
+
+        hamburgerId.classList.toggle('open')
+        cartId.classList.toggle('open') 
+        html.classList.add('stop-scrolling')
+      }
     }
 
     const HamburgerAbout = () => {
@@ -164,14 +174,6 @@ function App() {
 
       hamburgerId.classList.toggle('open')
       aboutPage.classList.toggle('show') 
-    }
-
-    const HamburgerShopAll = () => {
-      const hamburgerId = document.getElementById('hamburgerId')
-      const cartId = document.getElementById('cartId')
-
-      hamburgerId.classList.toggle('open')
-      cartId.classList.toggle('open') 
     }
     
     return (
