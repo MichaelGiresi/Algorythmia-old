@@ -12,8 +12,6 @@ import sheepimg1 from './assets/FollowTheLeaderPoster.jpeg'
 import can from './assets/can.png'
 import index from './index.css'
 
-
-
 function App() {
   
   const [about, setAbout] = useState(false)
@@ -21,6 +19,7 @@ function App() {
   const [cartCount, setCartCount] = useState(1)
   const [hamburger, setHamburger] = useState(false)
 
+  // Cart Count
   useEffect(() => {
     const cartRemoveCounter = document.getElementById('cart-increment-remove')
     const cartProductInfo = document.getElementById('cart-product-info-id')
@@ -51,6 +50,7 @@ function App() {
     }
   },[cartCount])
 
+  // Cart Remove button inside of the product container
   const cartRemove = () => {
     const remove = document.getElementById('cart-product-remove')
     const cartProductInfo = document.getElementById('cart-product-info-id')
@@ -72,7 +72,6 @@ function App() {
       cart.appendChild(empty)
     }
   }
-
 
   // About Page 
   const aboutPage = () => {
@@ -98,6 +97,7 @@ function App() {
       
     }
 
+    // Cart 
     // The parent div for the cart has an ID of cartId, and has a classname of cart-container
     // 1. Toggling another classlist to handle display none/flex
     // 2. Transition using opacity instead of right.
@@ -123,6 +123,7 @@ function App() {
       }
     }
 
+    // Closing cart function for clicking outside of the cart.
     const closeCart = () => {
       const cartId = document.getElementById('cartId')
       const hhh = document.getElementById('hhhy')
@@ -137,6 +138,7 @@ function App() {
       }
     }
 
+    // Hamburger Menu
     const Hamburger = () => {
       const hamburgerId = document.getElementById('hamburgerId')
       const hamburgerButton = document.getElementById('hamburger-button')
@@ -177,25 +179,21 @@ function App() {
     }
     
     return (
-      
-      
-      
-      <Router>
 
-      
-    <div id="about-page" className="about-container" onClick={() => {aboutPage()}}>
-      <div className="about-info-container">
-        <h1>Algorythmia</h1>
-        <h1>Algorythmia short description</h1>
-        <h3>How does it work?</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+    <Router>  
+      {/* About Page */}
+      <div id="about-page" className="about-container" onClick={() => {aboutPage()}}>
+        <div className="about-info-container">
+          <h1>Algorythmia</h1>
+          <h1>Algorythmia short description</h1>
+          <h3>How does it work?</h3>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
       </div>
     </div>
-
-
-   <div className="yyy">
-    <div className="hhh" id="hhhy" onClick={() => {closeCart()}}></div>
-    <div id="cartId" className="cart-container" > 
+    {/* Cart and div left of cart that closes cart on click */}
+      <div className="yyy">
+        <div className="hhh" id="hhhy" onClick={() => {closeCart()}}></div>
+        <div id="cartId" className="cart-container" > 
       <div className="cart-button-container">
         <button id="cart-button" className="cart-exit" onClick={() => {Cart()}}>X</button>
       </div>
