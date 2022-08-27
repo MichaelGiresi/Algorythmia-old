@@ -180,7 +180,8 @@ function App() {
     
     return (
 
-    <Router>  
+    <Router>
+
       {/* About Page */}
       <div id="about-page" className="about-container" onClick={() => {aboutPage()}}>
         <div className="about-info-container">
@@ -188,8 +189,9 @@ function App() {
           <h1>Algorythmia short description</h1>
           <h3>How does it work?</h3>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+        </div>
       </div>
-    </div>
+
     {/* Cart and div left of cart that closes cart on click */}
       <div className="yyy">
         <div className="hhh" id="hhhy" onClick={() => {closeCart()}}></div>
@@ -199,7 +201,6 @@ function App() {
       </div>
       <div id="cart-product-info-id" className="cart-product-info-container">
         <div>
-
         <img className="cart-product-image" src={sheepimg1}/>
         <div className="cart-product-increment">
           <button id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'15px'} height={'15px'}/> : "-" }</button>
