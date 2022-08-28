@@ -123,6 +123,9 @@ function App() {
       }
     }
 
+    // NEW FUNCTION HERE FOR THE CART EXIT. SET FUNCTION FOR X BUTTON IN CART
+
+
     // Closing cart function for clicking outside of the cart.
     const closeCart = () => {
       const cartId = document.getElementById('cartId')
