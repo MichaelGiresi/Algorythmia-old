@@ -21,6 +21,7 @@ function App() {
 
   // Cart Count
   useEffect(() => {
+
     const cartRemoveCounter = document.getElementById('cart-increment-remove')
     const cartProductInfo = document.getElementById('cart-product-info-id')
     const cartSubtotal = document.getElementById('cart-subtotal-id')
@@ -28,14 +29,17 @@ function App() {
     const cartPayChoice = document.getElementById('cart-pay-choice-id')
     const cart = document.getElementById('cartId')
     const test = document.getElementsByTagName('body')
+
     if(cartCount === 1) {
-      cartRemoveCounter.style.marginTop ='5px'
+      // cartRemoveCounter.style.marginTop ='5px'
       cartRemoveCounter.style.padding ='0px'
-      cartRemoveCounter.style.marginRight = '3px'
-    } else {
+      // cartRemoveCounter.style.marginRight = '3px'
+    } 
+    else {
       cartRemoveCounter.style.marginTop ='-2px'
       cartRemoveCounter.style.padding =''
     }
+
     if(cartCount === 0) {
       cartProductInfo.style.display ='none'
       cartSubtotal.style.display ='none'
@@ -60,15 +64,15 @@ function App() {
     const cart = document.getElementById('cartId')
 
     if(remove) {
+      const empty = document.createElement('h1')
+      setCartCount(0)
       cartProductInfo.style.display ='none'
       cartSubtotal.style.display ='none'
       cartPromo.style.display ='none'
       cartPayChoice.style.display ='none'
-      const empty = document.createElement('h1')
       empty.style.color = 'white'
       empty.style.fontFamily = 'JetBrains Mono'
       empty.style.textAlign = 'center'
-      empty.innerHTML = 'Your Cart is Empty!'
       cart.appendChild(empty)
     }
   }
@@ -94,7 +98,6 @@ function App() {
         document.body.style.margin = 'auto'
         console.log(about)
       }
-      
     }
 
     // Cart 
@@ -125,6 +128,16 @@ function App() {
 
     // NEW FUNCTION HERE FOR THE CART EXIT. SET FUNCTION FOR X BUTTON IN CART
 
+    const cartExit = () => {
+      const cartId = document.getElementById('cartId')
+      const hhh = document.getElementById('hhhy')
+      const html = document.getElementById('algo__html');
+      setCart(false)
+      setHamburger(false)
+      cartId.classList.remove('open')
+      hhh.classList.remove('open')
+      html.classList.remove('stop-scrolling')
+    }
 
     // Closing cart function for clicking outside of the cart.
     const closeCart = () => {
@@ -197,16 +210,16 @@ function App() {
 
     {/* Cart and div left of cart that closes cart on click */}
       <div className="yyy">
-        <div className="hhh" id="hhhy" onClick={() => {closeCart()}}></div>
+        <div className="hhh" id="hhhy" onClick={() => {cartExit()}}></div>
         <div id="cartId" className="cart-container" > 
       <div className="cart-button-container">
-        <button id="cart-button" className="cart-exit" onClick={() => {Cart()}}>X</button>
+        <button id="cart-button" className="cart-exit" onClick={() => {cartExit()}}>X</button>
       </div>
       <div id="cart-product-info-id" className="cart-product-info-container">
         <div>
         <img className="cart-product-image" src={sheepimg1}/>
         <div className="cart-product-increment">
-          <button id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'15px'} height={'15px'}/> : "-" }</button>
+          <div id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
           <div id="cart-increment">{cartCount}</div>
           <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
         </div>
