@@ -28,12 +28,9 @@ function App() {
     const cartPromo = document.getElementById('cart-promo-continue-id')
     const cartPayChoice = document.getElementById('cart-pay-choice-id')
     const cart = document.getElementById('cartId')
-    const test = document.getElementsByTagName('body')
 
     if(cartCount === 1) {
-      // cartRemoveCounter.style.marginTop ='5px'
       cartRemoveCounter.style.padding ='0px'
-      // cartRemoveCounter.style.marginRight = '3px'
     } 
     else {
       cartRemoveCounter.style.marginTop ='-2px'
@@ -107,51 +104,35 @@ function App() {
     const Cart = () => {
       const cartId = document.getElementById('cartId')
       const cartButton = document.getElementById('cart-button')
-      const hhh = document.getElementById('hhhy')
+      const cartOverlay = document.getElementById('cart-left-overlay-id')
       const html = document.getElementById('algo__html'); 
-      // console.log(body)
       
       if(cart) {
         setCart(false) 
         cartId.classList.toggle('open')
-        hhh.classList.toggle('open')
+        cartOverlay.classList.toggle('open')
         console.log(cart)
         html.classList.remove('stop-scrolling')
       } else {
         setCart(true) 
         cartId.classList.toggle('open')
-        hhh.classList.toggle('open')
+        cartOverlay.classList.toggle('open')
         console.log(cart)
         html.classList.add('stop-scrolling')
       }
     }
 
-    // NEW FUNCTION HERE FOR THE CART EXIT. SET FUNCTION FOR X BUTTON IN CART
-
+    
+    // Cart exit function.
     const cartExit = () => {
       const cartId = document.getElementById('cartId')
-      const hhh = document.getElementById('hhhy')
+      const cartOverlay = document.getElementById('cart-left-overlay-id')
       const html = document.getElementById('algo__html');
       setCart(false)
       setHamburger(false)
       cartId.classList.remove('open')
-      hhh.classList.remove('open')
+      cartOverlay.classList.remove('open')
       html.classList.remove('stop-scrolling')
-    }
-
-    // Closing cart function for clicking outside of the cart.
-    const closeCart = () => {
-      const cartId = document.getElementById('cartId')
-      const hhh = document.getElementById('hhhy')
-      const html = document.getElementById('algo__html');
-
-      if(hhh) {
-        setCart(false)
-        cartId.classList.toggle('open')
-        hhh.classList.toggle('open')
-        html.classList.remove('stop-scrolling')
-        
-      }
     }
 
     // Hamburger Menu
@@ -164,12 +145,11 @@ function App() {
         setHamburger(false) 
         hamburgerId.classList.toggle('open')
         html.classList.remove('stop-scrolling')
-        console.log(hamburger)
+
       } else {
         setHamburger(true) 
         hamburgerId.classList.toggle('open')
         html.classList.add('stop-scrolling')
-        console.log(hamburger)
       }
     }
 
@@ -209,12 +189,12 @@ function App() {
       </div>
 
     {/* Cart and div left of cart that closes cart on click */}
-      <div className="yyy">
-        <div className="hhh" id="hhhy" onClick={() => {cartExit()}}></div>
+      <div className="cart-parent">
+        <div className="cart-left-overlay" id="cart-left-overlay-id" onClick={() => {cartExit()}}></div>
         <div id="cartId" className="cart-container" > 
-      <div className="cart-button-container">
-        <button id="cart-button" className="cart-exit" onClick={() => {cartExit()}}>X</button>
-      </div>
+        <div className="cart-button-container">
+          <button id="cart-button" className="cart-exit" onClick={() => {cartExit()}}>X</button>
+        </div>
       <div id="cart-product-info-id" className="cart-product-info-container">
         <div>
         <img className="cart-product-image" src={sheepimg1}/>

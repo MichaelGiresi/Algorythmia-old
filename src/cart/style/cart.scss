@@ -258,7 +258,7 @@
     justify-content: space-between;
  }
 
-.hhh {
+.cart-left-overlay {
   visibility: hidden;
   background-color: #c3c3c3;
   opacity: .01;
@@ -268,7 +268,7 @@
   z-index: 2;
 }
 
-#hhhy.open {
+#cart-left-overlay-id.open {
   visibility: visible;
   width: 100%;
   height: 100vh;
