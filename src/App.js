@@ -192,88 +192,83 @@ function App() {
       <div className="cart-parent">
         <div className="cart-left-overlay" id="cart-left-overlay-id" onClick={() => {cartExit()}}></div>
         <div id="cartId" className="cart-container" > 
-        <div className="cart-button-container">
-          <button id="cart-button" className="cart-exit" onClick={() => {cartExit()}}>X</button>
-        </div>
-      <div id="cart-product-info-id" className="cart-product-info-container">
-        <div>
-        <img className="cart-product-image" src={sheepimg1}/>
-        <div className="cart-product-increment">
-          <div id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
-          <div id="cart-increment">{cartCount}</div>
-          <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
-        </div>
-        </div>
-        <div className="cart-product-info-increment-wrapper">
-        <div className="cart-product-info">
-          <h3>Follow The Leader</h3>
-          <h6>$12</h6>
-          <h6>In Stock</h6>
-          <button className="cart-product-remove-button" id="cart-product-remove" onClick={() => {cartRemove()}}>REMOVE</button>
-        </div>
-        <div className="cart-product-increment-laptop">
-          <button id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>-</button>
-          <div id="cart-increment">{cartCount}</div>
-          <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
-        </div>
-        </div>
-      </div>
-      <div id="cart-subtotal-id" className="cart-subtotal-container">
-        <div className="cart-subtotal">Subtotal</div>
-        <div className="cart-value">{`$${cartCount * 12}`}</div>
-      </div>
-      <div id="cart-promo-continue-id" className="cart-promo-continue-container">
-        <div className="cart-promo-title">Add Promo Code</div>
-        <input className="cart-promo-input" placeholder="Enter your code"></input>
-        <button className="cart-continue">Continue to Checkout</button>
-      </div>
-      <div id="cart-pay-choice-id" className="cart-pay-choice-container">
-        <h1>Payment Methods</h1>
-        <button className="cart-pay" id="cart-pay-paypal">Pay Pal</button>
-        <button className="cart-pay" id="cart-pay-apple">Apple Pay</button>
-        <button className="cart-pay" id="cart-pay-amazon">Amazon Pay</button>
-      </div>
-
-
-      </div>
-      </div>
-
-
-          <div className='nav'>
-      <div className='logo-links-container'>
-        <Link id='top' to="/" className="logo">A</Link>
-        {/* <div className='logo'>A</div> */}
-
-        <div className="nav-hamburger" onClick={() => {Hamburger()}}>
-          <div className="nav-hamburger-top"></div>
-          <div className="nav-hamburger-middle"></div>
-          <div className="nav-hamburger-bottom"></div>
-        </div>
-        <div id="hamburgerId">
-        <button id="hamburger-button" className="hamburger-exit" onClick={() => {Hamburger()}}>X</button>
-        <div className="hamburger-about" onClick={() => {HamburgerAbout()}} >About Page</div>
-        <a href="products" className="hamburger-shopall">Shop All</a>
-        <div className="hamburger-cart" onClick={() => {HamburgerCart()}}>Cart ({cartCount})</div>
-        </div>
-        
-        <div className='links-container'>
-
-          <Link to='products' className="shopall">SHOP ALL</Link>
-          {/* <div className='shopall'>SHOP ALL</div> */}
-          <div id="about"className='about' onClick={() => {aboutPage()}}>ABOUT</div>
-
-
-          <div className='cart' onClick={() => {Cart()}}>CART ({cartCount})</div>
+          <div className="cart-button-container">
+            <button id="cart-button" className="cart-exit" onClick={() => {cartExit()}}>X</button>
+          </div>
+          <div id="cart-product-info-id" className="cart-product-info-container">
+            <div>
+              <img className="cart-product-image" src={sheepimg1}/>
+              <div className="cart-product-increment">
+                <div id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
+                <div id="cart-increment">{cartCount}</div>
+                <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
+              </div>
+            </div>
+            <div className="cart-product-info-increment-wrapper">
+              <div className="cart-product-info">
+                <h3>Follow The Leader</h3>
+                <h6>$12</h6>
+                <h6>In Stock</h6>
+                <button className="cart-product-remove-button" id="cart-product-remove" onClick={() => {cartRemove()}}>REMOVE</button>
+              </div>
+              <div className="cart-product-increment-laptop">
+                <button id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>-</button>
+                <div id="cart-increment">{cartCount}</div>
+                <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
+              </div>
+            </div>
+          </div>
+          <div id="cart-subtotal-id" className="cart-subtotal-container">
+            <div className="cart-subtotal">Subtotal</div>
+            <div className="cart-value">{`$${cartCount * 12}`}</div>
+          </div>
+          <div id="cart-promo-continue-id" className="cart-promo-continue-container">
+            <div className="cart-promo-title">Add Promo Code</div>
+            <input className="cart-promo-input" placeholder="Enter your code"></input>
+            <button className="cart-continue">Continue to Checkout</button>
+          </div>
+          <div id="cart-pay-choice-id" className="cart-pay-choice-container">
+            <h1>Payment Methods</h1>
+            <button className="cart-pay" id="cart-pay-paypal">Pay Pal</button>
+            <button className="cart-pay" id="cart-pay-apple">Apple Pay</button>
+            <button className="cart-pay" id="cart-pay-amazon">Amazon Pay</button>
+          </div>
         </div>
       </div>
-      <div className='divider'></div>
-    </div>
+
+      {/* Nav */}
+      <div className='nav'>
+        <div className='logo-links-container'>
+          <Link id='top' to="/" className="logo">A</Link>
+          <div className="nav-hamburger" onClick={() => {Hamburger()}}>
+            <div className="nav-hamburger-top"></div>
+            <div className="nav-hamburger-middle"></div>
+            <div className="nav-hamburger-bottom"></div>
+          </div>
+          <div id="hamburgerId">
+            <button id="hamburger-button" className="hamburger-exit" onClick={() => {Hamburger()}}>X</button>
+            <div className="hamburger-about" onClick={() => {HamburgerAbout()}} >About Page</div>
+            <a href="products" className="hamburger-shopall">Shop All</a>
+            <div className="hamburger-cart" onClick={() => {HamburgerCart()}}>Cart ({cartCount})</div>
+          </div>
+          <div className='links-container'>
+            <Link to='products' className="shopall">SHOP ALL</Link>
+            <div id="about"className='about' onClick={() => {aboutPage()}}>ABOUT</div>
+            <div className='cart' onClick={() => {Cart()}}>CART ({cartCount})</div>
+          </div>
+        </div>
+        <div className='divider'></div>
+      </div>
+
+      {/* Routes */}
       <Routes>
         <Route path="/" element={<HomeOutput/>}/>
         <Route path="products" element={<ShopAll/>}  />
         <Route path="productpage" element={<Product/>} />
         <Route path="*" element = {<Error/>}/>
       </Routes>
+
+      {/* Footer */}
       <div className="footer-container">
         <a href="/">ALGORYTHMIA</a>
         <div className="footer-links-container">
@@ -283,7 +278,7 @@ function App() {
         </div>
       </div>      
       <div className="footer-container-mobile">
-      <a className="footer-algo" href="#top">ALGORYTHMIA</a>
+        <a className="footer-algo" href="#top">ALGORYTHMIA</a>
         <div className="footer-links-container-mobile">
           <div>TERMS OF SERVICE</div>
           <Link style={{color:"#c3c3c3", textDecoration:'none'}} to='products'>SHOP ALL</Link>
