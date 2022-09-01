@@ -4,8 +4,6 @@
 }
 
 .nav {
-    // background-color: green;
-    // width: 80%;
     max-width: 1600px;
     margin: 5px auto 0 auto;
     display: flex;
@@ -14,11 +12,9 @@
     font-family: 'JetBrains Mono';
     font-weight: bold;
     letter-spacing: 4px;
-
     @media (min-width: 1600px) {
         width: 100%;
     }
-    // background-color: b;
 }
 
 .logo-links-container {
@@ -31,23 +27,18 @@
 .links-container {
     display: none;
     width: 387px;
-    // background-color: gray;
     justify-content: space-between;
     color: white;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 0px;
-
     @media (min-width: 425px) {
         width: 357px;
     }
     @media (min-width: 768px) {
         display:flex;
         font-weight:100;
-    }
-    @media (min-width: 1149px) {
-        // width: 423px;
     }
 }
 
@@ -86,13 +77,11 @@
 .nav-hamburger {
     width: 25px;
     height: 18px;
-    // background-color: white;
     margin-top: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-
     @media(min-width:768px) {
         display: none;
     }
@@ -120,11 +109,9 @@
 #hamburgerId {
     position: absolute;
     z-index: 2;
-    /* width: 500px; */
     width: 100%;
     height: 100vh;
     background-color: black;
-    /* display: none; */
     visibility: hidden;
     right: -768px;
     transition-duration: 1s;
@@ -137,10 +124,7 @@
   }
   
   #hamburgerId.open {
-    /* display: flex; */
-    /* transition-duration: 2s; */
     visibility: visible;
-    /* width: 500px; */
     width: 100%;
     height: 100vh;
     top: 0px;

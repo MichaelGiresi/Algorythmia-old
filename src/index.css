@@ -1,8 +1,6 @@
 html {
   background-color: black;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
-
 }
 
 body {
@@ -14,11 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
-  /* max-width: 1600px; */
-  /* height: 100%;
-  width: 100%; */
-
 }
 
 body::-webkit-scrollbar {
@@ -35,6 +28,7 @@ code {
 
 
 
+/* About Styles */
 
 .about-container {
   display: flex; 
@@ -48,54 +42,28 @@ code {
   top: 0;
   bottom:0;
   max-width: 1600px;
-  
   margin: auto;
   background-color: black; 
-  /* width: 100%;  */
-  /* opacity: 0.8;  */
   height: 100vh;
-  /* transition: opacity 0.3s ease-in-out */
 }
-
-/* .about-container.fade {
-  display: flex;
-  opacity:.8;
-  transition: opacity 0.3s ease-in-out
-} */
 
 #about-page {
   opacity: 0; 
   visibility: hidden;
-  /* display: none; */
   transition: visibility 0.3s, opacity 0.3s ease-in-out; 
 }
 
 
 #about-page.show {
-  /* display: flex; */
   visibility: visible;
   opacity: 0.8;
   cursor: pointer;
-  /* position: absolute; */
-  /* max-width: 1600px; */
-  /* left: 0;
-  right: 20px;
-  top: 0;
-  bottom:0; */
-  /* margin: auto; */
 }
-
-
 
 @keyframes move {
   from {right: -500px}
   to {right: 0px}
 }
-
-
-
-
-
 
 
 .about-info-container {
@@ -106,10 +74,9 @@ code {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
   font-size: 22px;
-
 }
+
 .about-info-container h1 {
   font-family: "VT323";
 }
@@ -125,8 +92,10 @@ code {
 .about-info-container h3 {
   margin-bottom: 0;
   font-family: "VT323";
-  
 }
+
+
+/* Hamburger Styles */
 
 .hamburger-about {
   width: 95%;
