@@ -341,7 +341,6 @@
   display: none;
   width: 95%;
   margin: 0 auto 0 auto;
-  border-radius: 12px;
 }
 @media (min-width: 768px) {
   .video {
