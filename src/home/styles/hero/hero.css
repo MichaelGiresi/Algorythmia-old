@@ -116,7 +116,6 @@
 }
 @media (min-width: 768px) {
   .container1 {
-    width: 33%;
     margin-bottom: 0px;
   }
 }
@@ -177,6 +176,10 @@
   .container1-price {
     font-size: 22px;
   }
+}
+
+.container1-cart-container {
+  display: none;
 }
 
 .container2 {

@@ -12,23 +12,34 @@ import sheepimg1 from './assets/FollowTheLeaderPoster.jpeg'
 import can from './assets/can.png'
 import index from './index.css'
 
+
+
+
+
+
+
+
+
+// cart needs to be entirely re written, or at least a system has to be made to have an element in the cart that can be amended. First thing, is a div on hover appears on every
+// product tile. So that should be the first thing, create the div that appears on hover, that has quantity and size inputs if necessary, and a add to cart button. When the button is 
+// pressed, the value of the inputs will be implemented into a template, and will be amended as a child in the cart. And, the cart count will be updated.
+
 function App() {
-  
   const [about, setAbout] = useState(false)
-  const [cart, setCart] = useState(false)
+  const [cart1, setCart] = useState(false)
   const [cartCount, setCartCount] = useState(1)
   const [hamburger, setHamburger] = useState(false)
 
-  // Cart Count
   useEffect(() => {
+  
 
     const cartRemoveCounter = document.getElementById('cart-increment-remove')
     const cartProductInfo = document.getElementById('cart-product-info-id')
     const cartSubtotal = document.getElementById('cart-subtotal-id')
     const cartPromo = document.getElementById('cart-promo-continue-id')
     const cartPayChoice = document.getElementById('cart-pay-choice-id')
-    const cart = document.getElementById('cartId')
-
+    const cartMaster = document.getElementById('cartId')
+  
     if(cartCount === 1) {
       cartRemoveCounter.style.padding ='0px'
     } 
@@ -36,7 +47,7 @@ function App() {
       cartRemoveCounter.style.marginTop ='-2px'
       cartRemoveCounter.style.padding =''
     }
-
+  
     if(cartCount === 0) {
       cartProductInfo.style.display ='none'
       cartSubtotal.style.display ='none'
@@ -47,11 +58,10 @@ function App() {
       empty.style.fontFamily = 'JetBrains Mono'
       empty.style.textAlign = 'center'
       empty.innerHTML = 'Your Cart is Empty!'
-      cart.appendChild(empty)
+      cartMaster.appendChild(empty)
     }
   },[cartCount])
-
-  // Cart Remove button inside of the product container
+  
   const cartRemove = () => {
     const remove = document.getElementById('cart-product-remove')
     const cartProductInfo = document.getElementById('cart-product-info-id')
@@ -59,7 +69,7 @@ function App() {
     const cartPromo = document.getElementById('cart-promo-continue-id')
     const cartPayChoice = document.getElementById('cart-pay-choice-id')
     const cart = document.getElementById('cartId')
-
+  
     if(remove) {
       const empty = document.createElement('h1')
       setCartCount(0)
@@ -72,7 +82,34 @@ function App() {
       empty.style.textAlign = 'center'
       cart.appendChild(empty)
     }
+    
   }
+
+  
+   const Cart = () => {
+    const cartId = document.getElementById('cartId')
+    const cartButton = document.getElementById('cart-button')
+    const cartOverlay = document.getElementById('cart-left-overlay-id')
+    const html = document.getElementById('algo__html'); 
+    
+    if(cart) {
+      setCart(false) 
+      cartId.classList.toggle('open')
+      cartOverlay.classList.toggle('open')
+      console.log(cart)
+      html.classList.remove('stop-scrolling')
+    } else {
+      setCart(true) 
+      cartId.classList.toggle('open')
+      cartOverlay.classList.toggle('open')
+      console.log(cart)
+      html.classList.add('stop-scrolling')
+    }
+  }
+  // Cart Count
+
+  // Cart Remove button inside of the product container
+
 
   // About Page 
   const aboutPage = () => {
@@ -101,26 +138,9 @@ function App() {
     // The parent div for the cart has an ID of cartId, and has a classname of cart-container
     // 1. Toggling another classlist to handle display none/flex
     // 2. Transition using opacity instead of right.
-    const Cart = () => {
-      const cartId = document.getElementById('cartId')
-      const cartButton = document.getElementById('cart-button')
-      const cartOverlay = document.getElementById('cart-left-overlay-id')
-      const html = document.getElementById('algo__html'); 
-      
-      if(cart) {
-        setCart(false) 
-        cartId.classList.toggle('open')
-        cartOverlay.classList.toggle('open')
-        console.log(cart)
-        html.classList.remove('stop-scrolling')
-      } else {
-        setCart(true) 
-        cartId.classList.toggle('open')
-        cartOverlay.classList.toggle('open')
-        console.log(cart)
-        html.classList.add('stop-scrolling')
-      }
-    }
+
+
+
 
     
     // Cart exit function.
@@ -287,7 +307,6 @@ function App() {
       </div>
     </Router>
   );
-
 }
 
-export default App;
+export {App};

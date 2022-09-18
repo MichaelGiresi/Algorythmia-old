@@ -92,7 +92,6 @@
     color: black;
     margin-bottom: 15px;
     @media (min-width: 768px) {
-        width: 33%;
         margin-bottom: 0px;
     }
 }
@@ -143,6 +142,10 @@
     @media (min-width:1440px) {
         font-size: 22px;
     }
+}
+
+.container1-cart-container {
+    display: none;
 }
 
 
