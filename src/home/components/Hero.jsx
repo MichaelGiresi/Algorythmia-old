@@ -13,6 +13,8 @@ const Hero = () => {
         <div className='phrase'> ● YOU MAY HAVE IT</div>
       </div>
       <div className='featured-container'>
+        <div className='container-parent'>
+
         <div className='container1-container'>
 
         <div className='container1'>
@@ -35,6 +37,7 @@ const Hero = () => {
                 <button id="">+</button>
               </div>
             </div>
+        </div>
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>

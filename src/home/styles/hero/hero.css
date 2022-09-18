@@ -1,3 +1,12 @@
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #b7c9e5;
+}
+
 .hero {
   max-width: 1600px;
   margin: 0 auto 0 auto;
@@ -130,6 +139,7 @@
 }
 
 .container1-product-price-container {
+  background-color: #fff;
   height: 4vh;
   border-radius: 12px;
   display: flex;
@@ -178,8 +188,47 @@
   }
 }
 
+.container1::before {
+  content: "";
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  transform: var(--level-one);
+}
+
+.container1,
 .container1-cart-container {
-  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.container1-cart-container {
+  transform: rotateY(0.5turn);
+  color: var(--clr);
+  background: #333;
+}
+
+.container1-container {
+  position: relative;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.container-parent {
+  width: 33%;
+}
+
+.container-parent:hover .container1-container {
+  transform: rotateY(0.5turn);
 }
 
 .container2 {
