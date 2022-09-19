@@ -202,7 +202,7 @@
 .container1,
 .container1-cart-container {
   position: absolute;
-  top: 0px;
+  top: -289px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -215,6 +215,8 @@
   transform: rotateY(0.5turn);
   color: var(--clr);
   background: #333;
+  height: 577px;
+  border-radius: 12px;
 }
 
 .container1-container {

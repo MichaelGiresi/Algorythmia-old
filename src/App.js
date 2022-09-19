@@ -20,9 +20,12 @@ import index from './index.css'
 
 
 
-// cart needs to be entirely re written, or at least a system has to be made to have an element in the cart that can be amended. First thing, is a div on hover appears on every
-// product tile. So that should be the first thing, create the div that appears on hover, that has quantity and size inputs if necessary, and a add to cart button. When the button is 
-// pressed, the value of the inputs will be implemented into a template, and will be amended as a child in the cart. And, the cart count will be updated.
+/*
+Going with a new direction for the cart, that will be much easier to implement. The user will hover over a product image, and an overlay will 
+appear, asking the user if they want to add this item into their cart. If they click on the image, the overlay turns green, and says Added to cart!
+After adding an item to the cart, they can then go to the cart, and adjust the amount of the item they wish to purchase. They can also remove the
+item from the cart in it's entirity. The one question that is left is selecting wearable item sizes. That can come up as an option in the overlay.
+*/
 
 function App() {
   const [about, setAbout] = useState(false)

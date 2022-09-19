@@ -26,8 +26,8 @@ const Hero = () => {
         </div>
         <div className="container1-cart-container">
               <div className="">
-                <h3>Follow The Leader</h3>
-                <h6>$12</h6>
+                <h3>Sheep</h3>
+                <h6>$30</h6>
                 <h6>In Stock</h6>
                 <button className="" id="">REMOVE</button>
               </div>
