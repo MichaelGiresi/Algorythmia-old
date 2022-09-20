@@ -344,6 +344,32 @@
     }
 }
 
+<<<<<<< HEAD
+#test {
+    width: 100px;
+    background-color: #000;
+    position: absolute;
+    width: 528px;
+    height: 577px;
+    border-radius: 12px;
+    opacity: 0;
+    color: #c3c3c3;
+    transition: 1s;
+    text-align: center;
+}
+
+#test:hover {
+    opacity: .7;
+    transition: 1s;
+}
+
+#sheep_sizes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+=======
 
 
 // :root {
@@ -444,3 +470,4 @@
   
   
   
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf

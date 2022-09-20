@@ -14,6 +14,8 @@ import index from './index.css'
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -27,10 +29,16 @@ After adding an item to the cart, they can then go to the cart, and adjust the a
 item from the cart in it's entirity. The one question that is left is selecting wearable item sizes. That can come up as an option in the overlay.
 */
 
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
 function App() {
   const [about, setAbout] = useState(false)
+<<<<<<< HEAD
+  const [cart, setCart] = useState(false)
+  const [cartCount, setCartCount] = useState(3)
+=======
   const [cart1, setCart] = useState(false)
   const [cartCount, setCartCount] = useState(1)
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
   const [hamburger, setHamburger] = useState(false)
 
   useEffect(() => {
@@ -145,7 +153,6 @@ function App() {
 
 
 
-    
     // Cart exit function.
     const cartExit = () => {
       const cartId = document.getElementById('cartId')

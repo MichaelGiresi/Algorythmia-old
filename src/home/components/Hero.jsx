@@ -3,8 +3,13 @@ import feature1 from '../../assets/Wethreeheads01.jpeg'
 import feature2 from '../../assets/Brokengrid01.jpeg'
 import logo from '../../assets/AlgorythmiaLogotypeGif.gif'
 import video from '../../assets/PosterMockup.mp4'
+<<<<<<< HEAD
+import can from '../../assets/can.png'
+const Hero = ({cartCount, setCartCount}) => {
+=======
 import {App, cartRemove, setCartCount, cartCount} from '../../App'
 const Hero = () => {
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
 
   return (
     <div className='hero'>
@@ -13,17 +18,38 @@ const Hero = () => {
         <div className='phrase'> ● YOU MAY HAVE IT</div>
       </div>
       <div className='featured-container'>
+<<<<<<< HEAD
+        <div className='container1' id="cart_Sheep">
+=======
         <div className='container-parent'>
 
         <div className='container1-container'>
 
         <div className='container1'>
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
           <img className='container1-image'src={feature1}/>
           <div className='container1-product-price-container'>
             <div className='container1-product-title'>Sheep</div>
             <div className='container1-price'>$30</div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div id="test">
+          <h1>Sheep Shirt</h1>
+            <h2>Sizing</h2>
+          <div id="sheep_sizes">
+            <h3>Small</h3>
+            <h3>Medium</h3>
+            <h3>Large</h3>
+            <h3>Extra Large</h3>
+          </div>
+          <div className="cart-product-increment">
+                <div id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
+                <div id="cart-increment">{cartCount}</div>
+                <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
+              </div>
+          
+=======
         <div className="container1-cart-container">
               <div className="">
                 <h3>Sheep</h3>
@@ -38,6 +64,7 @@ const Hero = () => {
               </div>
             </div>
         </div>
+>>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>
