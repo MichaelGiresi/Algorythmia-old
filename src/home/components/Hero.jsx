@@ -3,13 +3,8 @@ import feature1 from '../../assets/Wethreeheads01.jpeg'
 import feature2 from '../../assets/Brokengrid01.jpeg'
 import logo from '../../assets/AlgorythmiaLogotypeGif.gif'
 import video from '../../assets/PosterMockup.mp4'
-<<<<<<< HEAD
 import can from '../../assets/can.png'
 const Hero = ({cartCount, setCartCount}) => {
-=======
-import {App, cartRemove, setCartCount, cartCount} from '../../App'
-const Hero = () => {
->>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
 
   return (
     <div className='hero'>
@@ -18,22 +13,13 @@ const Hero = () => {
         <div className='phrase'> ● YOU MAY HAVE IT</div>
       </div>
       <div className='featured-container'>
-<<<<<<< HEAD
         <div className='container1' id="cart_Sheep">
-=======
-        <div className='container-parent'>
-
-        <div className='container1-container'>
-
-        <div className='container1'>
->>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
           <img className='container1-image'src={feature1}/>
           <div className='container1-product-price-container'>
             <div className='container1-product-title'>Sheep</div>
             <div className='container1-price'>$30</div>
           </div>
         </div>
-<<<<<<< HEAD
         <div id="test">
           <h1>Sheep Shirt</h1>
             <h2>Sizing</h2>
@@ -49,22 +35,6 @@ const Hero = () => {
                 <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
               </div>
           
-=======
-        <div className="container1-cart-container">
-              <div className="">
-                <h3>Sheep</h3>
-                <h6>$30</h6>
-                <h6>In Stock</h6>
-                <button className="" id="">REMOVE</button>
-              </div>
-              <div className="">
-                <button id="">-</button>
-                <div id=""></div>
-                <button id="">+</button>
-              </div>
-            </div>
-        </div>
->>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>

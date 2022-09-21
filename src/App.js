@@ -14,31 +14,10 @@ import index from './index.css'
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-/*
-Going with a new direction for the cart, that will be much easier to implement. The user will hover over a product image, and an overlay will 
-appear, asking the user if they want to add this item into their cart. If they click on the image, the overlay turns green, and says Added to cart!
-After adding an item to the cart, they can then go to the cart, and adjust the amount of the item they wish to purchase. They can also remove the
-item from the cart in it's entirity. The one question that is left is selecting wearable item sizes. That can come up as an option in the overlay.
-*/
-
->>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
 function App() {
   const [about, setAbout] = useState(false)
-<<<<<<< HEAD
   const [cart, setCart] = useState(false)
   const [cartCount, setCartCount] = useState(3)
-=======
-  const [cart1, setCart] = useState(false)
-  const [cartCount, setCartCount] = useState(1)
->>>>>>> 505537ce3d4234e33f5cfb258e3eac0c882b31cf
   const [hamburger, setHamburger] = useState(false)
 
   useEffect(() => {
