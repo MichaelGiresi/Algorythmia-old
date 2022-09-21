@@ -4,7 +4,9 @@ import feature2 from '../../assets/Brokengrid01.jpeg'
 import logo from '../../assets/AlgorythmiaLogotypeGif.gif'
 import video from '../../assets/PosterMockup.mp4'
 import can from '../../assets/can.png'
-const Hero = ({cartCount, setCartCount}) => {
+import App from '../../App'
+const Hero = (props) => {
+  const {cartCount, setCartCount} = props
 
   return (
     <div className='hero'>
@@ -22,7 +24,7 @@ const Hero = ({cartCount, setCartCount}) => {
         </div>
         <div id="test">
           <h1>Sheep Shirt</h1>
-            <h2>Sizing</h2>
+            {/* <h2>Select your size and quantity:</h2> */}
           <div id="sheep_sizes">
             <h3>Small</h3>
             <h3>Medium</h3>
@@ -35,6 +37,7 @@ const Hero = ({cartCount, setCartCount}) => {
                 <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
               </div>
           
+          <button id='sheep-add-to-cart-button'>Add to Cart</button>
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>

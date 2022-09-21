@@ -179,37 +179,11 @@
   }
 }
 
-.container1::before {
-  content: "";
-  position: absolute;
-  --spacer: 1em;
-  top: var(--spacer);
-  bottom: var(--spacer);
-  left: var(--spacer);
-  right: var(--spacer);
-  transform: var(--level-one);
-}
-
-.container1-cart-container {
-  transform: rotateY(0.5turn);
-  color: var(--clr);
-  background: #333;
-  height: 577px;
-  border-radius: 12px;
-}
-
-.container1-container {
-  position: relative;
-  transition: transform 2s;
-  transform-style: preserve-3d;
-}
-
-.container-parent {
-  width: 33%;
-}
-
-.container-parent:hover .container1-container {
-  transform: rotateY(0.5turn);
+#sheep-add-to-cart-button {
+  height: 5vh;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  cursor: pointer;
 }
 
 .container2 {
@@ -397,6 +371,9 @@
   color: #c3c3c3;
   transition: 1s;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #test:hover {
