@@ -271,7 +271,7 @@ function App() {
 
       {/* Routes */}
       <Routes>
-        <Route path="/" element={<HomeOutput/>}/>
+        <Route path="/" element={<HomeOutput cartCount = {cartCount} setCartCount = {setCartCount}/>}/>
         <Route path="products" element={<ShopAll/>}  />
         <Route path="productpage" element={<Product/>} />
         <Route path="*" element = {<Error/>}/>
@@ -298,4 +298,4 @@ function App() {
   );
 }
 
-export {App};
+export default App;

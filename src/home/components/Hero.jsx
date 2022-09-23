@@ -6,8 +6,9 @@ import video from '../../assets/PosterMockup.mp4'
 import can from '../../assets/can.png'
 import App from '../../App'
 const Hero = (props) => {
-  const {cartCount, setCartCount} = props
-
+  const a = props.setCartCount
+  const b = props.cartCount
+console.log(props.name)
   return (
     <div className='hero'>
       <div className='title-container'>
@@ -32,9 +33,9 @@ const Hero = (props) => {
             <h3>Extra Large</h3>
           </div>
           <div className="cart-product-increment">
-                <div id="cart-increment-remove" onClick={() => {setCartCount(cartCount - 1)}}>{cartCount < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
-                <div id="cart-increment">{cartCount}</div>
-                <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button>
+                <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
+                <div id="cart-increment">{props.cartCount}</div>
+                {/* <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button> */}
               </div>
           
           <button id='sheep-add-to-cart-button'>Add to Cart</button>

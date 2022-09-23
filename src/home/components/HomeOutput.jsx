@@ -3,10 +3,10 @@ import Hero from './Hero'
 import Upcomming from './Upcomming'
 import Footer from './Footer'
 
-const HomeOutput = () => {
+const HomeOutput = (props) => {
   return (
     <div className='app'>
-      <Hero/>
+      <Hero cartCount = {props.cartCount} setCartCount = {props.setCartCount}/>
       <Upcomming/>
       <Footer/>
     </div>
