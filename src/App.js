@@ -3,9 +3,9 @@ import Upcomming from "./home/components/Upcomming";
 import nav from '../src/home/styles/nav/nav.css'
 import HomeOutput from "./home/components/HomeOutput";
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-import ShopAll from "./ShopAll/components/ShopAll";
+import ShopAll from "./shopAll/components/ShopAll";
 import Error from "./Error";
-import Product from '../src/Product/components/Product'
+import Product from '../src/product/components/Product'
 import {useState, useEffect} from 'react'
 import cart from './cart/style/cart.css'
 import sheepimg1 from './assets/FollowTheLeaderPoster.jpeg'

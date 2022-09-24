@@ -27,7 +27,7 @@ console.log(props.name)
           <h1>Sheep Shirt</h1>
             {/* <h2>Select your size and quantity:</h2> */}
           <div id="sheep_sizes">
-            <h3>Small</h3>
+            <h3 id='small'>Small</h3>
             <h3>Medium</h3>
             <h3>Large</h3>
             <h3>Extra Large</h3>
