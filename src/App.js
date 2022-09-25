@@ -19,6 +19,10 @@ function App() {
   const [cart, setCart] = useState(false)
   const [cartCount, setCartCount] = useState(3)
   const [hamburger, setHamburger] = useState(false)
+  const [sizeSmall, setSizeSmall] = useState(false)
+  const [sizeMedium, setSizeMedium] = useState(false)
+  const [sizeLarge, setSizeLarge] = useState(false)
+  const [sizeExtraLarge, setSizeExtraLarge] = useState(false)
 
   useEffect(() => {
   
@@ -271,7 +275,13 @@ function App() {
 
       {/* Routes */}
       <Routes>
-        <Route path="/" element={<HomeOutput cartCount = {cartCount} setCartCount = {setCartCount}/>}/>
+        <Route path="/" element={
+          <HomeOutput 
+            cartCount = {cartCount} 
+            setCartCount = {setCartCount}
+            sizeSmall = {setSizeSmall}
+          />}
+        />
         <Route path="products" element={<ShopAll/>}  />
         <Route path="productpage" element={<Product/>} />
         <Route path="*" element = {<Error/>}/>

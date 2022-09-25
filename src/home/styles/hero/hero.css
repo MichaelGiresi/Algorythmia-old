@@ -180,7 +180,8 @@
 }
 
 #sheep-add-to-cart-button {
-  height: 5vh;
+  height: 50px;
+  border-top: 1px solid black;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   cursor: pointer;
@@ -388,6 +389,23 @@
   justify-content: space-around;
 }
 
-#small {
+#sheep-small {
   cursor: pointer;
+}
+
+#sheep-medium {
+  cursor: pointer;
+}
+
+#sheep-large {
+  cursor: pointer;
+}
+
+#sheep-extra-large {
+  cursor: pointer;
+}
+
+#sheep-add-to-cart-button {
+  border-style: none;
+  width: 100%;
 }/*# sourceMappingURL=hero.css.map */

@@ -8,7 +8,20 @@ import App from '../../App'
 const Hero = (props) => {
   const a = props.setCartCount
   const b = props.cartCount
-console.log(props.name)
+  const c = props.sizeSmall
+
+
+
+  const selectSize = () => {
+    document.getElementById('sheep-small')
+    document.getElementById('sheep-medium')
+    document.getElementById('sheep-large')
+    document.getElementById('sheep-extra-small')
+
+
+
+  }
+
   return (
     <div className='hero'>
       <div className='title-container'>
@@ -24,21 +37,21 @@ console.log(props.name)
           </div>
         </div>
         <div id="test">
-          <h1>Sheep Shirt</h1>
-            {/* <h2>Select your size and quantity:</h2> */}
+          {/* <h1>Sheep Shirt</h1> */}
           <div id="sheep_sizes">
-            <h3 id='small'>Small</h3>
-            <h3>Medium</h3>
-            <h3>Large</h3>
-            <h3>Extra Large</h3>
+            <h3 id='sheep-small'>Small</h3>
+            <h3 id="sheep-medium">Medium</h3>
+            <h3 id="sheep-large">Large</h3>
+            <h3 id="sheep-extra-large">Extra Large</h3>
           </div>
+          <div className='test2'>
           <div className="cart-product-increment">
-                <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 2? <img  src={can} width={'25px'} height={'25px'}/> : "-" }</div>
+                <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 1? '' : "-" }</div>
                 <div id="cart-increment">{props.cartCount}</div>
-                {/* <button id="cart-increment-add" onClick={() => {setCartCount(cartCount + 1)}}>+</button> */}
+                <button id="cart-increment-add" onClick={() => {a(b + 1)}}>+</button>
               </div>
-          
           <button id='sheep-add-to-cart-button'>Add to Cart</button>
+          </div>
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>
