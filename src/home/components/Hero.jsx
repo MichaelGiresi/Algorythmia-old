@@ -53,7 +53,7 @@ const Hero = (props) => {
           <button id='sheep-add-to-cart-button'>Add to Cart</button>
           </div>
         </div>
-        <div id="test">
+        <div id="testt">
           <div id="sheep_sizes">
             <h3 id='sheep-small'>Small</h3>
             <h3 id="sheep-medium">Medium</h3>
@@ -69,7 +69,7 @@ const Hero = (props) => {
           <button id='sheep-add-to-cart-button'>Add to Cart</button>
           </div>
         </div>
-        <div id="test">
+        <div id="testtt">
           <div id="sheep_sizes">
             <h3 id='sheep-small'>Small</h3>
             <h3 id="sheep-medium">Medium</h3>
