@@ -295,11 +295,26 @@
 }
 
 #test {
-    width: 100px;
     background-color: #000;
-    position: absolute;
-    width: 528px;
-    height: 577px;
+    // position: absolute;
+    width: 33%;
+    // height: 120%;
+    border-radius: 12px;
+    opacity: 0;
+    color: #c3c3c3;
+    transition: 1s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#testt {
+    background-color: #000;
+    // position: absolute;
+    width: 33%;
+    // height: 120%;
     border-radius: 12px;
     opacity: 0;
     color: #c3c3c3;
@@ -316,12 +331,36 @@
     transition: 1s;
 }
 
+#testt:hover {
+    opacity: .7;
+    transition: 1s;
+}
+
 #sheep_sizes {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
     
+}
+
+#testtt {
+    background-color: #000;
+    width: 30%;
+    border-radius: 12px;
+    opacity: 0;
+    color: #c3c3c3;
+    transition: 1s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#testtt:hover {
+    opacity: .7;
+    transition: 1s;
 }
 
 #sheep-small {
@@ -343,4 +382,13 @@
 #sheep-add-to-cart-button {
     border-style: none;
     width: 100%;
+}
+
+#test-container {
+    width: 95%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1600px;
 }
