@@ -36,8 +36,8 @@ const Hero = (props) => {
             <div className='container1-price'>$30</div>
           </div>
         </div>
+        <div id="test-container">
         <div id="test">
-          {/* <h1>Sheep Shirt</h1> */}
           <div id="sheep_sizes">
             <h3 id='sheep-small'>Small</h3>
             <h3 id="sheep-medium">Medium</h3>
@@ -52,6 +52,39 @@ const Hero = (props) => {
               </div>
           <button id='sheep-add-to-cart-button'>Add to Cart</button>
           </div>
+        </div>
+        <div id="test">
+          <div id="sheep_sizes">
+            <h3 id='sheep-small'>Small</h3>
+            <h3 id="sheep-medium">Medium</h3>
+            <h3 id="sheep-large">Large</h3>
+            <h3 id="sheep-extra-large">Extra Large</h3>
+          </div>
+          <div className='test2'>
+          <div className="cart-product-increment">
+                <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 1? '' : "-" }</div>
+                <div id="cart-increment">{props.cartCount}</div>
+                <button id="cart-increment-add" onClick={() => {a(b + 1)}}>+</button>
+              </div>
+          <button id='sheep-add-to-cart-button'>Add to Cart</button>
+          </div>
+        </div>
+        <div id="test">
+          <div id="sheep_sizes">
+            <h3 id='sheep-small'>Small</h3>
+            <h3 id="sheep-medium">Medium</h3>
+            <h3 id="sheep-large">Large</h3>
+            <h3 id="sheep-extra-large">Extra Large</h3>
+          </div>
+          <div className='test2'>
+          <div className="cart-product-increment">
+                <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 1? '' : "-" }</div>
+                <div id="cart-increment">{props.cartCount}</div>
+                <button id="cart-increment-add" onClick={() => {a(b + 1)}}>+</button>
+              </div>
+          <button id='sheep-add-to-cart-button'>Add to Cart</button>
+          </div>
+        </div>
         </div>
         <div className='container2'>
           <img className='container2-image' src={feature2}/>

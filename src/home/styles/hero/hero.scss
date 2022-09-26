@@ -295,11 +295,10 @@
 }
 
 #test {
-    width: 100px;
     background-color: #000;
-    position: absolute;
+    // position: absolute;
     width: 33%;
-    height: 120%;
+    // height: 120%;
     border-radius: 12px;
     opacity: 0;
     color: #c3c3c3;
@@ -343,4 +342,13 @@
 #sheep-add-to-cart-button {
     border-style: none;
     width: 100%;
+}
+
+#test-container {
+    width: 95%;
+    height: 17.4%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    margin: 0 auto;
 }
