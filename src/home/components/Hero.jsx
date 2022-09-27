@@ -45,7 +45,7 @@ const Hero = (props) => {
             <h3 id="sheep-extra-large">Extra Large</h3>
           </div>
           <div className='test2'>
-          <div className="cart-product-increment">
+          <div id="test-cart-product-increment">
                 <div id="cart-increment-remove" onClick={() => {a(b - 1)}}>{b < 1? '' : "-" }</div>
                 <div id="cart-increment">{props.cartCount}</div>
                 <button id="cart-increment-add" onClick={() => {a(b + 1)}}>+</button>
