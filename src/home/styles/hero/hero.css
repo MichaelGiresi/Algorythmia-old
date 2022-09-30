@@ -459,4 +459,9 @@
   margin-top: 10px;
   border-radius: 8px;
   justify-content: space-around;
+}
+
+.container1:hover, #test:active {
+  opacity: 0.7;
+  transition: 1s;
 }/*# sourceMappingURL=hero.css.map */
