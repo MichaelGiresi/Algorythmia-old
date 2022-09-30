@@ -398,3 +398,10 @@
     border-radius: 8px;
     justify-content: space-around;
 }
+
+.container1:hover, #test:active {
+
+        opacity: .7;
+        transition: 1s;
+    
+}
