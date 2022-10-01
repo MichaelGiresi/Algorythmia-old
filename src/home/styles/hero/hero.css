@@ -363,7 +363,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 #testt {
@@ -380,7 +380,7 @@
 }
 
 #test:hover {
-  opacity: 0.7;
+  opacity: 0.5;
   transition: 1s;
 }
 
@@ -442,6 +442,7 @@
 
 #test-container {
   width: 95%;
+  height: 61vh;
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -464,4 +465,8 @@
 .container1:hover, #test:active {
   opacity: 0.7;
   transition: 1s;
+}
+
+#style_test {
+  flex-direction: column-reverse;
 }/*# sourceMappingURL=hero.css.map */

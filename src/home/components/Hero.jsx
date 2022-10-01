@@ -38,11 +38,13 @@ const Hero = (props) => {
         </div>
         <div id="test-container">
         <div id="test">
+          <div id="style_test">
           <div id="sheep_sizes">
             <h3 id='sheep-small'>Small</h3>
             <h3 id="sheep-medium">Medium</h3>
             <h3 id="sheep-large">Large</h3>
             <h3 id="sheep-extra-large">Extra Large</h3>
+          </div>
           </div>
           <div className='test2'>
           <div id="test-cart-product-increment">
